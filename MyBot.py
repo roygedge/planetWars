@@ -1,4 +1,3 @@
-import importlib
 
 def get_closest_object(self,objects,pw):
 	closer = objects[0]
@@ -51,5 +50,6 @@ def do_turn(pw):
 		dest = get_closest_object(source,pw.enemy_planets() + pw.neutral_planets(),pw)
 		num_ships = source.num_ships() * 0.7
 		pw.issue_order(source, dest, num_ships)
-	
+	for fleet in pw.my_fleets():
+		
 	
